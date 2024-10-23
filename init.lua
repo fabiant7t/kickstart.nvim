@@ -925,5 +925,14 @@ require('lazy').setup({
   },
 })
 
+-- Go: Autocommand that runs GoFmt and GoImports before saving Go files
+vim.api.nvim_create_autocmd('BufWritePre', {
+  pattern = '*.go',
+  callback = function()
+    vim.cmd 'GoFmt'
+    vim.cmd 'GoImports'
+  end,
+})
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
