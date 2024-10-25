@@ -262,6 +262,11 @@ require('lazy').setup({
         '<cmd>Telescope file_browser<cr>',
         desc = 'File Browser',
       },
+      {
+        '<leader>ff',
+        '<cmd>Telescope find_files<cr>',
+        desc = 'Find Files',
+      },
     },
   },
 
