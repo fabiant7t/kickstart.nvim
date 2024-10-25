@@ -250,6 +250,21 @@ require('lazy').setup({
   --
   -- Use the `dependencies` key to specify the dependencies of a particular plugin
 
+  { -- File Browser
+    'nvim-telescope/telescope-file-browser.nvim',
+    dependencies = {
+      'nvim-telescope/telescope.nvim',
+      'nvim-lua/plenary.nvim',
+    },
+    keys = {
+      {
+        '<leader>fb',
+        '<cmd>Telescope file_browser<cr>',
+        desc = 'File Browser',
+      },
+    },
+  },
+
   { -- Fuzzy Finder (files, lsp, etc)
     'nvim-telescope/telescope.nvim',
     event = 'VimEnter',
